@@ -1,0 +1,53 @@
+:root {
+  box-sizing: border-box;
+  font-size: 16px;    /***Em alternativa utilizar 0.875em (14px/16px=0.875) que funciona da mesma forma se a predefinição do tamanho de letra média do browser for 16px como é costume.***/
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+@media (max-width: 800px) {
+  body {
+      font-size: 0.75rem;
+  }
+} /***Se a janela de visualização respeitar a media query, aplica o tamanho de letra definido neste rule-set***/
+
+@media (min-width: 1200px) {
+  body {
+      font-size: 1rem;
+  }
+} /***Se a janela de visualização respeitar a media query, aplica o tamanho de letra definido neste rule-set***/
+
+
+/***Regra geral (a adaptar a cada situação): font-size - rem; borders - px; all the rest (paddings, margins, border-radius) - em; container width (when necessary) - % ***/
+
+/*************** Para reparar um bug do IE que apresenta os conteúdos do container <main> como inline:
+main {
+  display: block;
+}
+***************/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;0,800;1,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'); */
+
+body {
+  font-family: 'EB Garamond', Times, 'Times New Roman', serif;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+p {
+  color: purple;
+  font-size: 72px;
+}
